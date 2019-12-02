@@ -39,14 +39,16 @@ $$\sum_{x \in E_x} (ax + b) P[\textbf X = x] + b = a \sum _{x \in E_x} (x  P[\te
 - Caso continuo 
 $$\int _{x \in E_x} (ax + b) f_ {\textbf X}(x)+ b \quad  dx= a \int  _{x \in E_x} (x  f_ {\textbf X}(x)) dx + b$$
 
-##### Monotomía 
+### 
 
 ## Propiedades de la esperanza matemática n-dimensional
 
 ### Linealidad  
 
 Se quiere probar que para cualquier $(a_1,..., a_n), (b_1,...,b_n) \in \mathbb{R^n}$, 
-$$\exist E [X_i] \Rightarrow  \exist E [a_i X_i + b_i]$$  y además si existe $E [\sum_{i=1}^{n}a_i X_i + b_i]$ entonces es igual a $\sum_{i=1}^{n}a_i E[X_i] + b_i$
+
+$$\exists E [X_i] \Rightarrow  \exists E [a_i X_i + b_i]$$
+y además si existe $E [\sum_{i=1}^{n}a_i X_i + b_i]$ entonces es igual a $\sum_{i=1}^{n}a_i E[X_i] + b_i$
  
 ##### Demostración 
 
@@ -55,7 +57,8 @@ $$E [\sum_{i=1}^{n}a_i X_i + b_i] = \sum_{i=1}^{n}(a_i E[X_i] + b_i)$$
 
 ### Monotomía  
 
-Sean $X_1$ $X_2$ variabels aleatoria unidimensionales para las cuales existen sendas esperanzas, entontes se tiene que si 
+Sean $X_1$ $X_2$ variabels aleatoria unidimensionales para las cuales existen sendas esperanzas
+, entontes se tiene que si 
 
 $$X_1 \le  X_2 \Rightarrow  E[X_1] \le  E[X_2]$$
 
