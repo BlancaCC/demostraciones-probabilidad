@@ -48,6 +48,17 @@ $$P(aX+bY = c) = 1$$
 Aplicamos la desigualdad de Cauchy-Schwarz a $X-E[X]$ y $Y-E[Y]$.
 $$(E[(X-E[X])(Y-E[Y])])^2 \leq E[(X-E[X])^2]E[(Y-E[Y])^2]$$
 $$(Cov(X,Y))^2 \leq Var(X)Var(Y)$$
-Para la segunda parte, si X e Y son no degeneradas por el teorema anterior se da la igualdad si y solo si existen $a,b\neq 0$ con
+Para la segunda parte, si X e Y son no degeneradas, por el teorema anterior si se da la igualdad existen $a,b\neq 0$ con
 $$P(a(X-E[X])+b(Y-E[Y]) = 0 ) = 1$$
-Basta con tomar $ c = aE[X] + bE[Y]$.
+Basta con tomar $c = aE[X] + bE[Y]$.
+Para el recíproco, partimos ahora de que exiten $a,b\in \mathbb{R}\setminus \{0\},c\in \mathbb{R}$ tales que
+$$P(aX+bY = c) = 1$$
+Procedemos de manera análoga a la demostración anterior.
+$$P(Y = \frac{c-aX}{b}) = 1$$
+Luego
+$$Var(Y) = E[(Y-E[Y])^2] = E[(\frac{c-aX}{b}-\frac{c-aE[X]}{b})^2]$$
+$$ = E[(-\frac{a}{b}(X-E[X]))^2] = \frac{a^2}{b^2}Var(X)$$
+$$Cov(X,Y) = E[(X-E[X])(Y-E[Y])] = -\frac{a}{b}Var(X)$$
+De esta manera se verifica la igualdad.
+$$(Cov(X,Y))^2 = Var(X)Var(Y)$$
+En el caso de que X e Y sean degeneradas la igualdad es evidente, por lo que queda concluida la demostración.
