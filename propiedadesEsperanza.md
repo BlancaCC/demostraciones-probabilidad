@@ -1,100 +1,63 @@
 ---
 title: "Propiedades de la esperanza matemática  y desigualdad de Cauchy-Schwarz"
-author:  Blanca Cano Camero, Daniel Krell Calvo 
+author:  Blanca Cano Camero, Daniel Krell Calvo
 date: 2 de Diciembre del 2019
 output: pdf_document
 ---
 
 
-## Consideraciones previas
 
-### Definición de la Esperanza matemática
+### Linealidad
 
-Sea un vector aleatorio n-dimensional: 
- $$\textbf{X} = ( X_{1}, ..., X_{n} ) : (\Omega,   \mathcal{A}, P) \rightarrow (\mathbb{R}^n, \mathcal{B}^n, P_x)$$ 
-
- La esperanza matemática $E[\textbf{X}] \text{de  }     \textbf{X}$ si existe se define como  un vector cuyas componentes son las esperanzas matemáticas de sus componentes aleatorias. 
-  
-  
-#### Algunas propiedades de la esperanza matemática unidimensional:  
+Sea un vector aleatorio n-dimensional:
+ $$\textbf{X} = ( X_{1}, ..., X_{n} ) : (\Omega,   \mathcal{A}, P) \rightarrow (\mathbb{R}^n, \mathcal{B}^n, P_x)$$
 
 
-##### Linealidad   
 
-Se denotará en este subapartado a $\textbf{X}$ como una variable aleatoria unidimensional.  
- si existe $E[\textbf{X}]$ entontes  $\forall a,b \in \mathbb R,\quad  \exists E[a\textbf{X} + b] =  a E[\textbf{X}]  + b$
-
-Demostración de la existencia: 
-- Caso discreto: Por convergencia absoluta de una serie : 
-
-$$\sum_{x \in E_x} |ax + b| P[\textbf X = x] + b \le |a| \sum _{x \in E_x} (x  P[\textbf X = x]  ) +| b| < \infty$$
-
-- Caso continuo: Por convergencia absoluta de la integral 
-$$\int _{x \in E_x} |ax + b| f_ {\textbf X}(x) + b  \quad dx\le |a| \int_{x \in E_x} x f_ {\textbf X}(x)  dx +| b| < \infty$$
-
-Demostración de la linealidad: 
-Por la linealidad de los operadores suma e integral; 
-
-- Caso discreto: 
-
-$$\sum_{x \in E_x} (ax + b) P[\textbf X = x] + b = a \sum _{x \in E_x} (x  P[\textbf X = x]  ) + b$$
-
-
-- Caso continuo 
-$$\int _{x \in E_x} (ax + b) f_ {\textbf X}(x)+ b \quad  dx= a \int  _{x \in E_x} (x  f_ {\textbf X}(x)) dx + b$$
-
-Con esta misma idea trabajaremos para el caso n-dimensional. 
-
-### 
-
-## Propiedades de la esperanza matemática n-dimensional
-
-### Linealidad  
-
-Se quiere probar que para cualquier $(a_1,..., a_n), (b_1,...,b_n) \in \mathbb{R}^n$, 
+Se quiere probar que para cualquier $(a_1,..., a_n), (b_1,...,b_n) \in \mathbb{R}^n$,
 
 $$\exists E [X_i] \Rightarrow  \exists E [a_i X_i + b_i]$$
-y además si existe $E [\sum_{i=1}^{n}a_i X_i + b_i]$ entonces es igual a $\sum_{i=1}^{n}a_i E[X_i] + b_i$
- 
-##### Demostración 
+y además si existe $E [\sum_{i=1}^{n}a_i X_i + b_i]$ entonces es igual a $\sum_{i=1}^{n}a_i E[X_i] + b_i$.
 
-- Caso discreto: 
-Comencemos por probar su existencia:  
+##### Demostración
 
-$$\sum_{x \in E_x} |\sum_{i=1}^{n}a_ix_i + b_i|P[\textbf X = x_i] + b_i \le \sum _{x \in E_x} (|a_i|\sum _{i=1}^n x_i  P[\textbf X = x_i])+|b_i| =$$
-$$= \sum _{i=1}^n |a_i|(\sum _ {x \in E_x}|x_i|  P[\textbf X = x_i])+|b_i| = \sum_{i=1}^n |a_i| E[X_i] + |b_i| < \infty$$  
+- Caso discreto:
 
-Queda probado con esto su existencia, ya que la serie es absolutamente convergente, puesto que existe la esperanza de cada componente $X_i$, es decir cada uno de sus miembros son finitos. 
+Comencemos por probar su existencia:
 
+$$\sum_{x \in E_x} | \sum_{i=1}^{n}a_ix_i + b_i|P[X_1=x_1,\dotsm,X_n=x_n] \le \sum _{x \in E_x} (\sum _{i=1}^n |a_i||x_i|+|b_i|)  P[X_1=x_1,\dotsm,X_n=x_n]$$
+$$= \sum _{i=1}^n |a_i|(\sum _ {x \in E_x}|x_i|  P[\textbf X = x])+|b_i|  < \infty$$
 
-Veamos ahora que se da la igualdad: 
-
-$$\sum_{x \in E_x} \sum_{i=1}^{n}(a_ix_i + b_i)P[\textbf X = x_i] + b_i =  \sum _{i=1}^n a_i(\sum _ {x \in E_x}x_i  P[\textbf X = x_i])+b_i = \sum_{i=1}^n a_i E[X_i] +b_i$$ 
-
-- Caso continuo: Existencia por convergencia absoluta de la integral, misma idea que caso discreto. 
-
-$$\int _{x \in \mathbb{R}^n} \sum _{i=1}^n|a_ix_i + b_i| f_ {\textbf X}(x_1,...,x_n)  \quad dx_1...dx_n \le \int_{x \in \mathbb R^n} (\sum _{i=1}^n|a_i| |x_i| + |b_i|) f_ {\textbf X}(x_1,...,x_n)  dx_1...dx_n = $$
-$$= \sum_{i=1}^n |a_i| \int_{\mathbb R^n} x_i f_X(x_1,...,x_n) dx_1...dx_n  + |b_i|< \infty$$
-
-Veamos ahora que se da la igualdad: 
-
-$$\int _{x \in \mathbb{R}^n} \sum _{i=1}^n(a_ix_i + b_i) f_ {\textbf X}(x_1,...,x_n)  \quad dx_1...dx_n = \sum_{i=1}^n |a_i| \int_{\mathbb R^n} x_i f_X(x_1,...,x_n) dx_1...dx_n  + |b_i|=$$
-$$=\sum_{i=1}^n |a_i| E[X_i] + b_i$$ 
-
-Llegando por tanto a la igualdad que queríamos probar. 
+Sabemos que la última expresión es finita por la existencia de $E[X_i] \, \forall i \in \{1,\dotsc,n\}$.
 
 
-### Monotomía  
+Veamos ahora que se da la igualdad:
 
-Sean $X_1$ $X_2$ variables aleatoria unidimensionales para las cuales existen sendas esperanzas
-, entontes se tiene que si 
+$$\sum_{x \in E_x} \sum_{i=1}^{n}(a_ix_i + b_i)P[\textbf X = x] + b_i =  \sum _{i=1}^n a_i(\sum _ {x \in E_x}x_i  P[\textbf X = x])+b_i = \sum_{i=1}^n a_i E[X_i] +b_i$$
+
+- Caso continuo: Existencia por convergencia absoluta de la integral, misma idea que caso discreto.
+
+$$\int _{\mathbb{R}^n} \sum _{i=1}^n|a_ix_i + b_i| f_ {\textbf X}(x_1,...,x_n)  \,dx_1...dx_n \le \int_{\mathbb R^n} (\sum _{i=1}^n|a_i| |x_i| + |b_i|) f_ {\textbf X}(x_1,...,x_n)  dx_1...dx_n = $$
+$$= \sum_{i=1}^n |a_i| \int_{\mathbb R^n} |x_i| f_X(x_1,...,x_n) dx_1...dx_n  + |b_i|< \infty$$
+
+Veamos ahora que se da la igualdad:
+
+$$\int _{ \mathbb{R}^n} \sum _{i=1}^n(a_ix_i + b_i) f_ {\textbf X}(x_1,...,x_n)  \, dx_1...dx_n = \sum_{i=1}^n a_i \int_{\mathbb R^n} x_i f_X(x_1,...,x_n) dx_1...dx_n  + b_i=$$
+$$=\sum_{i=1}^n a_i E[X_i] + b_i$$
+
+Llegando por tanto a la igualdad que queríamos probar.
+
+
+### Monotonía
+
+Sean $X_1$, $X_2$ variables aleatorias unidimensionales para las cuales existen sendas esperanzas. Entonces, se tiene que
 
 $$X_1 \le  X_2 \Rightarrow  E[X_1] \le  E[X_2]$$
 
-###### Demostración  
+###### Demostración
 Como la suma de varibles aleatorias es una variable aleatoria podemos definir $Z = X_2 -X_1$
 
-Dada la no negatividad de la esperanza tenemos que $E[Z]> 0$ Aplicando la linealidad de la variable aleatoria 
+Como $Z\geq0$ tenemos que $E[Z]\geq 0$. Aplicando la linealidad de la variable aleatoria
 $$E[Z] =  E[X_2] - E[X_1] \ge 0 \Rightarrow[X_2] > E[X_1]$$
 
 
