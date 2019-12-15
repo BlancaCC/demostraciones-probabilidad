@@ -5,31 +5,27 @@ date: 2 de Diciembre del 2019
 output: pdf_document
 ---
 
-
+## Propiedades de la esperanza
 
 ### Linealidad
 
 Sea un vector aleatorio n-dimensional:
  $$\textbf{X} = ( X_{1}, ..., X_{n} ) : (\Omega,   \mathcal{A}, P) \rightarrow (\mathbb{R}^n, \mathcal{B}^n, P_x)$$
 
-
-
 Se quiere probar que para cualquier $(a_1,..., a_n), (b_1,...,b_n) \in \mathbb{R}^n$,
 
 $$\exists E [X_i] \Rightarrow  \exists E [a_i X_i + b_i]$$
 y además si existe $E [\sum_{i=1}^{n}a_i X_i + b_i]$ entonces es igual a $\sum_{i=1}^{n}a_i E[X_i] + b_i$.
 
-##### Demostración
+#### Demostración
 
 - Caso discreto:
 
 Comencemos por probar su existencia:
-
 $$\sum_{x \in E_x} | \sum_{i=1}^{n}a_ix_i + b_i|P[X_1=x_1,\dotsm,X_n=x_n] \le \sum _{x \in E_x} (\sum _{i=1}^n |a_i||x_i|+|b_i|)  P[X_1=x_1,\dotsm,X_n=x_n]$$
 $$= \sum _{i=1}^n |a_i|(\sum _ {x \in E_x}|x_i|  P[\textbf X = x])+|b_i|  < \infty$$
 
 Sabemos que la última expresión es finita por la existencia de $E[X_i] \, \forall i \in \{1,\dotsc,n\}$.
-
 
 Veamos ahora que se da la igualdad:
 
@@ -54,11 +50,11 @@ Sean $X_1$, $X_2$ variables aleatorias unidimensionales para las cuales existen 
 
 $$X_1 \le  X_2 \Rightarrow  E[X_1] \le  E[X_2]$$
 
-###### Demostración
+#### Demostración
 Como la suma de varibles aleatorias es una variable aleatoria podemos definir $Z = X_2 -X_1$
 
 Como $Z\geq0$ tenemos que $E[Z]\geq 0$. Aplicando la linealidad de la variable aleatoria
-$$E[Z] =  E[X_2] - E[X_1] \ge 0 \Rightarrow[X_2] > E[X_1]$$
+$$E[Z] =  E[X_2] - E[X_1] \ge 0 \Rightarrow E[X_2] \geq E[X_1]$$
 
 
 ## Desigualdad de Cauchy-Schwarz
