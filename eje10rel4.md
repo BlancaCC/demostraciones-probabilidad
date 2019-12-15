@@ -1,7 +1,7 @@
 # Ejercicio 10 
 
 Sean X,Y variables con función de densidad 
-$$f_(X,Y)(x,y)= x+y \text{ en } (x,y)\in[0,1]\times [0,1] \text{0 en el resto del intervalo}$$  
+$$f_{(X,Y)}(x,y)= x+y \quad \text{en } (x,y)\in[0,1]\times [0,1] \text{0 en el resto del intervalo}$$  
 
 Calcular 
 
@@ -51,3 +51,51 @@ $$E[(E[X/Y])^2]=
 \frac{1}{4}(\frac{1}{2}+ \frac{10}{36} + \frac{11}{36}\log{(\frac{36+18}{18}})) \simeq 0,27836$$
 
 $$E[Var(X/Y)] = E[X^2]+E[(E[X/Y])^2]=0.695$$
+
+# DANI ÉCHALES UN VISTACILLO A ESTE APARTADO, SI ESTÁ BIEN HEHCO LA DE Y/X SE HACE IGUAL (y por simetría de la función diría que da lo mismo <3>)
+
+## (b) Las razones de correlación $Y/X \text{ y } X/Y$  
+
+Las razones de correlación se definen como 
+$$\mu^2_ {X/Y} = \frac{Var(E[X/Y])}{Var(X)} = 
+1- \frac{E[Var(X/Y)]}{Var(X)}$$  
+
+Puesto que $E[Var(X/Y)]$ ya la tenemos calculados calcularemos las respectivas varianzas: 
+
+$$Var(X) = E[X^2]- E[X]^2$$
+
+$$E[X]=\int_0^1 x f_x(x) dx =
+\int_0^1 x (x+\frac{1}{2}) \quad dx = 
+\frac{1}{3}+\frac{1}{4}= \frac{7}{12}$$
+
+Por consiguiente 
+$$Var(X) = E[X^2]- E[X]^2 = 
+\frac{5}{12} -(\frac{7}{12})^2 = \frac{11}{144}\simeq 0,07639$$
+
+Y finalmente 
+
+$$\mu^2_ {X/Y} = 
+1- \frac{E[Var(X/Y)]}{Var(X)}=
+1-\frac{0.695}{0.07639} =-8.0980$$ 
+# ALGO VA MAL Xd  DEBERÍA SER MENOR QUE 1
+
+## (c) Rectas de regresión $X/Y, Y/X$  
+
+La recta de regresión $Y/X$ se calcula como: 
+
+$$Y=aX-b = E[Y]+a(x-E[x]); \quad \text{donde } a= \frac{Cov(X,Y)}{Var(X)}; \quad b = E[Y]-aE[X]; $$
+
+$Cov(X,Y)=E[XY]-E[X]E[Y]$
+
+$$E[XY]=\int_0^1\int_0^1 xy f_{(X,Y)}(x,y) dydx= \int_0^1\int_0^1 xy(x+y) dydx = 
+\int_0^1 \frac{x^2}{2}+\frac{x}{3}dx =\frac{1}{3}$$
+
+## (d) Coeficiente de correlación lineal  
+
+Queremos calcular 
+$$\rho_{X,Y} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var( Y)}}$$
+
+Solo nos faltaría calculas la covarianza $Cov(X,Y)=E[XY]-E[X]E[Y]$
+
+$$E[XY]=\int_0^1\int_0^1 xy f_{(X,Y)}(x,y) dydx= \int_0^1\int_0^1 xy(x+y) dydx = 
+\int_0^1 \frac{x^2}{2}+\frac{x}{3}dx =\frac{1}{3}$$
