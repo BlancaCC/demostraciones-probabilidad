@@ -120,11 +120,11 @@ $$\eta^2_ {X/Y} =
 1- \frac{E[Var(X/Y)]}{Var(X)}=
 1-\frac{0.07571}{0.07639} =0.00890$$
 
-$$\eta^2_ {X/Y} = 0.1378800724864219$$ 
+$$\eta^2_ {X/Y} = 0.008964753515282142$$ 
 
 Puesto que los cálculos para $\eta^2_ {Y/X}$ son iguales que para $\eta^2_ {X/Y}$ podemos afirmar que: 
 
-$$\eta^2_ {Y/X}= 0.1378800724864219$$
+$$\eta^2_ {Y/X}= 0.008964753515282142$$
 
 Nota: El ajuste no es muy bueno, ya que es un valore ente cero y uno, que cuanto más próximo esté a uno mejor será. 
 
