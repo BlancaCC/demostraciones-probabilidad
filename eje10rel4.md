@@ -1,3 +1,9 @@
+---
+title: "Ejercicio 10"
+author:  Blanca Cano Camero, Daniel Krell Calvo
+date: 2 de Diciembre del 2019
+output: pdf_document
+---
 # Ejercicio 10
 
 Sean X,Y variables con función de densidad
@@ -51,12 +57,12 @@ $$E[(E[X/Y])^2]=
 \int_0^1 (\frac{3y+2}{6y+3})^2 (y+\frac{1}{2}) \; dy = $$ $$= \int_0^1 \frac{(3y+2)^2}{6^2(y+\frac{1}{2})}\; dy=
 \int_0^1 \frac{9y^2+12y+4}{36y+18}\; dy=
 \frac{1}{4}\int_0^1 (y + \frac{10}{36}+ \frac{11}{36y+18})dy=$$ $$=
-\frac{1}{4}(\frac{1}{2}+ \frac{10}{36} + \frac{11}{36}\log{(\frac{36+18}{18}})) \simeq 0,27836$$
+\frac{1}{s un medio 4}(\frac{1}{2}+ \frac{10}{36} + \frac{11}{36}\log{(\frac{36+18}{18}})) \simeq 0,27836$$
 
 
-$$ECM = E[Var(X/Y)] = E[X^2]+E[(E[X/Y])^2]=0.695$$
+$$ECM = E[Var(X/Y)] = E[X^2]-E[(E[X/Y])^2]=0.695$$
+//he cambiado el signo, que antes tenía un menos
 -->
-
 
 $$E[(E[X/Y])^2]=
 \int_0^1 E[X/Y=y]^2 f_y(y)\; dy =
@@ -66,6 +72,7 @@ $$E[(E[X/Y])^2]=
 \frac{1}{4}[\frac{y^2}{2}+\frac{5}{6}y+\frac{\log(36y+18)}{36}]^1_0 =
 \frac{1}{4}(\frac{1}{2}+ \frac{5}{6} + {\frac{\log(54)}{36}}-\frac{\log(18)}{36}) \simeq 0,34096$$
 
+$$E[(E[X/Y])^2] \simeq 0,3508$$
 $$ECM = E[Var(X/Y)] = E[X^2]-E[(E[X/Y])^2]=0.07571$$
 
 
@@ -82,8 +89,10 @@ $$E[(E[Y/X])^2]=
 \frac{1}{4}\int_0^1 (x + \frac{5}{6}+ \frac{1}{36x+18})dx=$$ $$=
 \frac{1}{4}[\frac{x^2}{2}+\frac{5}{6}x+\frac{\log(36x+18)}{36}]^1_0 =
 \frac{1}{4}(\frac{1}{2}+ \frac{5}{6} + {\frac{\log(54)}{36}}-\frac{\log(18)}{36}) \simeq 0,34096$$
-
+$$E[(E[Y/X])^2] \simeq 0,3508$$
 $$ECM = E[Var(Y/X)] = E[Y^2]-E[(E[Y/X])^2]=0.07571$$
+
+$$ECM = 0.06586$$ 
 
 
 
@@ -110,7 +119,14 @@ Y finalmente
 $$\eta^2_ {X/Y} =
 1- \frac{E[Var(X/Y)]}{Var(X)}=
 1-\frac{0.07571}{0.07639} =0.00890$$
-# ALGO VA MAL Xd  DEBERÍA SER MENOR QUE 1
+
+$$\eta^2_ {X/Y} = 0.1378800724864219$$ 
+
+Puesto que los cálculos para $\eta^2_ {Y/X}$ son iguales que para $\eta^2_ {X/Y}$ podemos afirmar que: 
+
+$$\eta^2_ {Y/X}= 0.1378800724864219$$
+
+Nota: El ajuste no es muy bueno, ya que es un valore ente cero y uno, que cuanto más próximo esté a uno mejor será. 
 
 ## (c) Rectas de regresión $X/Y, Y/X$
 
@@ -123,12 +139,21 @@ $Cov(X,Y)=E[XY]-E[X]E[Y]$
 $$E[XY]=\int_0^1\int_0^1 xy f_{(X,Y)}(x,y) dydx= \int_0^1\int_0^1 xy(x+y) dydx =
 \int_0^1 \frac{x^2}{2}+\frac{x}{3}dx =\frac{1}{3}$$
 
+Por consiguiente $$ cov(X,Y) = \frac{-5}{6}$$
+Y la recta de regresión $Y/X$ es: $\varphi(x) = \frac{7}{12}-\frac{120}{11}(x-\frac{7}{12} )$
+
+Por la simetría de los cálculos tenemos que la recta de regresión $X/Y$: 
+
+$$\varphi(y) = \frac{7}{12}-\frac{120}{11}(y-\frac{7}{12} )$$
 ## (d) Coeficiente de correlación lineal
 
 Queremos calcular
-$$\rho_{X,Y} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var( Y)}}$$
+$$\rho_{X,Y} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var( Y)}} = \frac{-120}{11}$$
 
-Solo nos faltaría calculas la covarianza $Cov(X,Y)=E[XY]-E[X]E[Y]$
-
-$$E[XY]=\int_0^1\int_0^1 xy f_{(X,Y)}(x,y) dydx= \int_0^1\int_0^1 xy(x+y) dydx =
-\int_0^1 \frac{x^2}{2}+\frac{x}{3}dx =\frac{1}{3}$$
+**¡ALGOOO HEMOS CALCULADO MAL!**
+ Sabemos que $-1 \leq \rho_{X,Y} \leq 1$ 
+- Si r = 1, existe una correlación positiva perfecta. El índice indica una dependencia total entre las dos variables denominada relación directa.
+- Si 0 < r < 1, existe una correlación positiva.
+    Si r = 0, no existe relación lineal. Pero esto no necesariamente implica que las variables son independientes: pueden existir todavía relaciones no lineales entre las dos variables.
+- Si -1 < r < 0, existe una correlación negativa.
+- Si r = -1, existe una correlación negativa perfecta. El índice indica una dependencia total entre las dos variables llamada relación inversa: cuando una de ellas aumenta, la otra disminuye en proporción constante.
