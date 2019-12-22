@@ -32,6 +32,7 @@ $$E[Y/X]=\int_0^1 y f_{y/x=x_0}(y) \; dy =
 
 $$E[Y/X]= \frac{x_0 }{2x_0 +1}  +  \frac{1}{3(x_0+\frac{1}{2})} = \frac{3x_0+2}{6x_0+3}$$
 
+$$\varphi(x) = \frac{3x+2}{6x+3}$$
 
 De igual manera
 $$E[X/Y]=\int_0^1 x f_{x/y=y_0}(x) \; dx =
@@ -39,6 +40,9 @@ $$E[X/Y]=\int_0^1 x f_{x/y=y_0}(x) \; dx =
 [\frac{y_0 x^2}{2y_0 +1}  +  \frac{x^3}{3(y_0+\frac{1}{2})}]_{x=0}^{x=1}$$
 
 $$E[X/Y]= \frac{y_0 }{2y_0 +1}  +  \frac{1}{3(y_0+\frac{1}{2})} = \frac{3y_0+2}{6y_0+3}$$
+
+$$\varphi(y) = \frac{3y+2}{6y+3}$$
+
 
 
 ### Cálculo del error cuadrático medio
@@ -75,7 +79,7 @@ $$E[(E[Y/X])^2]=
 \frac{1}{4}(\frac{1}{2}+ \frac{5}{6} + {\frac{\log(54)}{36}}-\frac{\log(18)}{36}) \simeq 0,34096$$
 
 $$ECM = E[Var(Y/X)] = E[Y^2]-E[(E[Y/X])^2]=0.07570408$$
- 
+
 
 
 
@@ -103,13 +107,14 @@ $$\eta^2_ {X/Y} =
 1- \frac{E[Var(X/Y)]}{Var(X)}=
 1-\frac{0.07571}{0.07639} \simeq 0.00890$$
 
-$$\eta^2_ {X/Y}     \simeq 0.008964753515282142$$ 
+$$\eta^2_ {X/Y}     \simeq 0.008964753515282142$$
 
-Puesto que los cálculos para $\eta^2_ {Y/X}$ son iguales que para $\eta^2_ {X/Y}$ podemos afirmar que: 
+Puesto que los cálculos para $\eta^2_ {Y/X}$ son iguales que para $\eta^2_ {X/Y}$ podemos afirmar que:
 
 $$\eta^2_ {Y/X} \simeq 0.008964753515282142$$
 
-Nota: El ajuste no es muy bueno, ya que $0 \leq \eta^2_ {X/Y} \leq 1$, y cuanto más próximo esté a uno mejor será. 
+
+Nota: El ajuste no es muy bueno, ya que $\eta^2_ {X/Y}$, es prácticamente 0.
 
 ## (c) Rectas de regresión $X/Y, Y/X$
 
@@ -122,24 +127,25 @@ $Cov(X,Y)=E[XY]-E[X]E[Y]$
 $$E[XY]=\int_0^1\int_0^1 xy f_{(X,Y)}(x,y) dydx= \int_0^1\int_0^1 xy(x+y) dydx =
 \int_0^1 \frac{x^2}{2}+\frac{x}{3}dx =\frac{1}{3}$$
 
-Por consiguiente $$ cov(X,Y) = E[XY]-E[X]E[Y]=\frac{-1}{144}$$
-Y la recta de regresión $Y/X$ es: $\varphi(x) = \frac{7}{12}-\frac{1}{11}(x-\frac{7}{12} )$
+Por consiguiente $$ Cov(X,Y) = E[XY]-E[X]E[Y]=\frac{-1}{144}$$
+Y la recta de regresión $Y/X$ es:
+$$\varphi(x) = \frac{7}{12}-\frac{1}{11}(x-\frac{7}{12} ) = -\frac{1}{11}x+\frac{917}{132}$$
 
-Por la simetría de los cálculos tenemos que la recta de regresión $X/Y$: 
+Por la simetría de los cálculos tenemos que la recta de regresión $X/Y$:
 
-$$\varphi(y) = \frac{7}{12}-\frac{120}{11}(y-\frac{7}{12} )$$  
+$$\varphi(y) = -\frac{1}{11}y+\frac{917}{132}$$
 
 ## (d) Coeficiente de correlación lineal
 
 Queremos calcular
 $$\rho_{X,Y} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var( Y)}} = \frac{-1}{11}\simeq -0,09090909$$
 
-### Consideraciones del coeficiente de correlación lineal  
+### Consideraciones del coeficiente de correlación lineal
 
  Sabemos que $-1 \leq \rho_{X,Y} \leq 1$
 
-- Si r = 1, existe una correlación positiva perfecta. El índice indica una dependencia total entre las dos variables denominada relación directa.  
-- Si 0 < r < 1, existe una correlación positiva.  
-- Si r = 0, no existe relación lineal. Pero esto no necesariamente implica que las variables son independientes: pueden existir todavía relaciones no lineales entre las dos variables.  
-- Si -1 < r < 0, existe una correlación negativa.  
-- Si r = -1, existe una correlación negativa perfecta. El índice indica una dependencia total entre las dos variables llamada relación inversa: cuando una de ellas aumenta, la otra disminuye en proporción constante.  
+- Si r = 1, existe una correlación positiva perfecta. El índice indica una dependencia total entre las dos variables denominada relación directa.
+- Si 0 < r < 1, existe una correlación positiva.
+- Si r = 0, no existe relación lineal. Pero esto no necesariamente implica que las variables son independientes: pueden existir todavía relaciones no lineales entre las dos variables.
+- Si -1 < r < 0, existe una correlación negativa.
+- Si r = -1, existe una correlación negativa perfecta. El índice indica una dependencia total entre las dos variables llamada relación inversa: cuando una de ellas aumenta, la otra disminuye en proporción constante.
