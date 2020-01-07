@@ -11,9 +11,9 @@ $$f_{(X,Y)}(x,y)= x+y \; \text{en } (x,y)\in[0,1]\times [0,1] \text{,\;0 en el r
 
 Calcular
 
-##(a)Curvas de regresión de $Y/X$ y $X/Y$,  así como los errores cuadráticos medios asociados.
+## (a) Curvas de regresión de $Y/X$ y $X/Y$,  así como los errores cuadráticos medios asociados.
 
-###Curvas de regresión de $Y/X$ y $X/Y$
+### Curvas de regresión de $Y/X$ y $X/Y$
 La curva de regresión  $Y/X$ es $Y=E[Y/X]$
 Para ello procederé a calcular las respectivas marginales:
 
@@ -114,7 +114,7 @@ Puesto que los cálculos para $\eta^2_ {Y/X}$ son iguales que para $\eta^2_ {X/Y
 $$\eta^2_ {Y/X} \simeq 0.008964753515282142$$
 
 
-Nota: El ajuste no es muy bueno, ya que $\eta^2_ {X/Y}$, es prácticamente 0.
+Nota: El ajuste no es muy bueno, ya que $\eta^2_ {X/Y}$ es prácticamente 0.
 
 ## (c) Rectas de regresión $X/Y, Y/X$
 
@@ -144,8 +144,8 @@ $$\rho_{X,Y} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var( Y)}} = \frac{-1}{11}\simeq -0,09
 
  Sabemos que $-1 \leq \rho_{X,Y} \leq 1$
 
-- Si r = 1, existe una correlación positiva perfecta. El índice indica una dependencia total entre las dos variables denominada relación directa.
-- Si 0 < r < 1, existe una correlación positiva.
-- Si r = 0, no existe relación lineal. Pero esto no necesariamente implica que las variables son independientes: pueden existir todavía relaciones no lineales entre las dos variables.
-- Si -1 < r < 0, existe una correlación negativa.
-- Si r = -1, existe una correlación negativa perfecta. El índice indica una dependencia total entre las dos variables llamada relación inversa: cuando una de ellas aumenta, la otra disminuye en proporción constante.
+- Si  $\rho$ = 1, existe una correlación positiva perfecta. El índice indica una dependencia total entre las dos variables denominada relación directa.
+- Si 0 <  $\rho$ < 1, existe una correlación positiva.
+- Si  $\rho$ = 0, no existe relación lineal. Pero esto no necesariamente implica que las variables son independientes: pueden existir todavía relaciones no lineales entre las dos variables.
+- Si -1 <  $\rho$ < 0, existe una correlación negativa.
+- Si  $\rho$ = -1, existe una correlación negativa perfecta. El índice indica una dependencia total entre las dos variables llamada relación inversa: cuando una de ellas aumenta, la otra disminuye en proporción constante.
