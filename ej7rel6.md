@@ -4,8 +4,8 @@ author:  Blanca Cano Camero, Daniel Krell Calvo
 date: 22 de Diciembre del 2019
 output: pdf_document
 ---
-**7.  Cierta enfermedad afecta al 0.5% de una poblacion.  Existe una prueba para la deteccion de la enfermedad, que da positiva en los individuos enfermos con probabilidad 0.99 y da negativa en los individuos sanos con probabilidad 0.99.
-a)  Calcular la probabilidad de que un individuo elegido al azar est ́erealmente enfermo si la prueba da resultado positivo.
+**7.  Cierta enfermedad afecta al 0.5% de una poblacion.  Existe una prueba para la detección de la enfermedad, que da positiva en los individuos enfermos con probabilidad 0.99 y da negativa en los individuos sanos con probabilidad 0.99.
+a)  Calcular la probabilidad de que un individuo elegido al azar esté realmente enfermo si la prueba da resultado positivo.
 b)  Calcular,  aproximadamente,  el  numero  mınimo  de  personas  con resultado positivo en la prueba que hay que elegir, de forma aleatoria e independiente, para que la proporcion de personas realmente enfermas en la muestra sea menor que 1/2 con probabilidad mayor o igual que 0.95.**
 
 
@@ -28,3 +28,22 @@ $$S_n = \sum_{i=1}^{n}{E_i},$$
 donde cada $X_i$ estudia si un individuo que ha dado positivo tiene la enfermedad. Por el apartado anterior, $X_i\leadsto B(1,p=\frac{99}{228})$, luego $S_n \leadsto B(n,\frac{99}{228})$.
 Queremos
 $$P[\frac{S_n}{n} < \frac{1}{2}] \geq 0,95$$
+$$P[S_n < \frac{n}{2}] \geq 0,95$$  
+
+El segundo teorema límite De Moivre y Laplaceque: 
+
+$$\frac{S_n - E[S_n]}{\sqrt(Var(S_n))} = \frac{S_n -np}{ \sqrt{np(1-p)}}
+\rightarrow ^L Z \sim \mathcal N(0,1)$$  
+
+Aplicando tal cambio de variable y sustituyendo valores en nuestra ecuación llegamos a: 
+
+$P[Z< \frac{\frac{n}{2}-np}{ \sqrt{np(1-p)}}] \geq 0,95$ ;  $P[Z< \frac{\frac{n}{2}-n\frac{99}{228}}{ \sqrt{n\frac{99}{228}(1-\frac{99}{228})}}] \geq 0,95$
+
+Llamemos $a = \frac{\frac{n}{2}-n\frac{99}{228}}{ \sqrt{n\frac{99}{228}(1-\frac{99}{228})}} = 
+\frac{n \frac{5}{76}}{\sqrt{n\frac{1419}{5776}}}$
+
+Mirando en la tabla de la normal concluimos que $a \simeq 1,65$ 
+de aquí despejamos la n: 
+ 
+ Llegando a una ecuación de segundo grado con soluciones $n=10.735$ y $n= 0$
+Descartamos la segunda y llegamos a la conclusión de que el número mínimo es 11. 
