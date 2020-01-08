@@ -25,25 +25,24 @@ $$P[E/O] = \frac{P[O/E]P[E]}{P[O/E]P[E]+P[O/S]P[S]} = \frac{0,99*0,005}{0,99*0,0
 b)
 Definimos
 $$S_n = \sum_{i=1}^{n}{E_i},$$
-donde cada $X_i$ estudia si un individuo que ha dado positivo tiene la enfermedad. Por el apartado anterior, $X_i\leadsto B(1,p=\frac{99}{228})$, luego $S_n \leadsto B(n,\frac{99}{228})$.
+donde cada $X_i$ estudia si un individuo que ha dado positivo tiene la enfermedad. Por el apartado anterior, $X_i\leadsto B(1,p=\frac{99}{298})$, luego $S_n \leadsto B(n,\frac{99}{298})$.
 Queremos
 $$P[\frac{S_n}{n} < \frac{1}{2}] \geq 0,95$$
-$$P[S_n < \frac{n}{2}] \geq 0,95$$  
+$$P[S_n < \frac{n}{2}] \geq 0,95$$
 
-El segundo teorema límite De Moivre y Laplaceque: 
+Usando el segundo teorema del límite de De Moivre y Laplace:
 
-$$\frac{S_n - E[S_n]}{\sqrt(Var(S_n))} = \frac{S_n -np}{ \sqrt{np(1-p)}}
-\rightarrow ^L Z \sim \mathcal N(0,1)$$  
+$$\frac{S_n - E[S_n]}{\sqrt{Var(S_n)}} = \frac{S_n -np}{ \sqrt{np(1-p)}}
+\rightarrow ^L Z \sim \mathcal N(0,1)$$
 
-Aplicando tal cambio de variable y sustituyendo valores en nuestra ecuación llegamos a: 
+Aplicando lo anterior:
 
-$P[Z< \frac{\frac{n}{2}-np}{ \sqrt{np(1-p)}}] \geq 0,95$ ;  $P[Z< \frac{\frac{n}{2}-n\frac{99}{228}}{ \sqrt{n\frac{99}{228}(1-\frac{99}{228})}}] \geq 0,95$
+$P[Z< \frac{\frac{n}{2}-np}{ \sqrt{np(1-p)}}] \geq 0,95$ ;  $P[Z< \frac{\frac{n}{2}-n\frac{99}{298}}{ \sqrt{n\frac{99}{298}(1-\frac{99}{298})}}] \geq 0,95$
 
-Llamemos $a = \frac{\frac{n}{2}-n\frac{99}{228}}{ \sqrt{n\frac{99}{228}(1-\frac{99}{228})}} = 
-\frac{n \frac{5}{76}}{\sqrt{n\frac{1419}{5776}}}$
+Llamemos $a = \frac{\frac{n}{2}-n\frac{99}{298}}{ \sqrt{n\frac{99}{298}(1-\frac{99}{298})}} $
 
-Mirando en la tabla de la normal concluimos que $a \simeq 1,65$ 
-de aquí despejamos la n: 
- 
- Llegando a una ecuación de segundo grado con soluciones $n=10.735$ y $n= 0$
-Descartamos la segunda y llegamos a la conclusión de que el número mínimo es 11. 
+Mirando en la tabla de la normal concluimos que $a \geq 1,65$
+de aquí despejamos la n:
+
+ Llegando a una ecuación de segundo grado con soluciones $n=21,45$ y $n= 0$
+Descartamos la segunda y llegamos a la conclusión de que el número mínimo es 22.
